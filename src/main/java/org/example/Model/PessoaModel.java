@@ -1,7 +1,6 @@
 package org.example.Model;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class PessoaModel {
@@ -20,38 +19,15 @@ public class PessoaModel {
     }
 
     public void inserirNoBanco(Connection conn) throws SQLException {
-        String sql = "INSERT INTO Pessoas (CPF, Nome, Sobrenome, Endereco, Cidade) VALUES (?, ?, ?, ?, ?)";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, cpf);
-        pstmt.setString(2, nome);
-        pstmt.setString(3, sobrenome);
-        pstmt.setString(4, endereco);
-        pstmt.setString(5, cidade);
-        pstmt.executeUpdate();
-        pstmt.close();
+        //TO-DO IMPLEMENTAR
     }
 
     public void alterarNoBanco(Connection conn) throws SQLException {
-        String sql = "UPDATE Pessoas SET Nome = ?, Sobrenome = ?, Endereco = ?, Cidade = ? WHERE CPF = ?";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, nome);
-        pstmt.setString(2, sobrenome);
-        pstmt.setString(3, endereco);
-        pstmt.setString(4, cidade);
-        pstmt.setString(5, cpf);
-        pstmt.executeUpdate();
-        pstmt.close();
+        //TO-DO IMPLEMENTAR
     }
 
     public void deletarNoBanco(Connection conn) throws SQLException {
-        String sql = "DELETE FROM Pessoas WHERE Nome = ? AND Sobrenome = ? AND Endereco = ? AND Cidade = ?";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, nome);
-        pstmt.setString(2, sobrenome);
-        pstmt.setString(3, endereco);
-        pstmt.setString(4, cidade);
-        pstmt.executeUpdate();
-        pstmt.close();
+        //TO-DO IMPLEMENTAR
     }
 
 }
